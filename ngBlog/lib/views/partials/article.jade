@@ -1,0 +1,13 @@
+div.container.article-view.animated.bounceInUp
+	div.col-xs-12.col-sm-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+		div.article-header
+			h1 {{ article.title }}
+			p
+				i.ion-person
+				span &nbsp;{{ article.author }} |&nbsp;
+				i.ion-calendar
+				time {{ article.createdOn | date }}
+			hr
+		div.article-content
+			p.article-body
+			hr

@@ -1,0 +1,50 @@
+div.container.animated.bounceInUp
+	div.col-xs-12.col-sm-12.col-md-8.col-md-offset-2.col-lg-8.col-lg-offset-2
+		h2 Admin
+		div.pull-right.admin-info
+			p {{ user }}
+			a(href='#!/', data-ng-click='logout()') Logout
+				i.ion-power
+		div.admin-tabs(tabset)
+			div(tab, heading='Archive')
+				form(role='form').admin-form
+					div.form-group
+						div.input-group
+							span.input-group-addon
+								i.ion-archive
+							input.form-control(type='text', data-ng-model='search', placeholder='Archive')
+				div.admin-archive
+					table.table.table-hover
+						tr
+							th Post Date
+							th Article Title
+							th Edit
+							th Delete
+						tr(data-ng-repeat='archive in archives | filter:search')
+							td {{archive.createdOn | date}}
+							td
+								a(href='#!/article/{{archive._id}}') {{archive.title | limitTo:75}}
+							td
+								a(href='#!/article/{{archive._id}}/edit')
+									i.ion-edit
+							td
+								a(href='#', data-ng-click='removeArticle(archive._id)')
+									i.ion-trash-b
+					span.archive-message(data-ng-show='archiveMessage') {{ archiveMessage }}
+			div(tab, heading='Create')
+				div.admin-form
+					form(name='articleForm', data-ng-submit='submitArticle()')
+						div.form-group
+							input.form-control(data-ng-model='article.title', placeholder='Title')
+						div.form-group
+							input.form-control(data-ng-model='article.author', placeholder='Author')
+						div.form-group
+							select.form-control(data-ng-model='article.type', data-ng-options='type.name for type in types')
+								option(value='') -- Choose Type --
+						div.form-group
+							textarea.form-control(data-ng-model='article.desc', rows='3', placeholder='Description')
+						div.form-group
+							textarea.form-control(data-ng-model='article.body', rows='5', placeholder='Body')
+						button.btn.btn-default.pull-right(type='submit') Create
+						br
+						span.form-message(data-ng-show='formMessage') {{formMessage}}

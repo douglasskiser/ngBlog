@@ -1,0 +1,26 @@
+div.main-view.animated.bounceInUp
+	div.main-header(data-ng-show='isMobile')
+		div.main-msg
+			h1 Hello,
+			h2 my name is Doug Kiser <br /> and welcome to my blog.
+			small This blog is an experiment and a learning experience.
+	div.main-header(particles, options='options', data-ng-hide='isMobile')
+		div.main-msg
+			h1 Hello,
+			h2 my name is Doug Kiser <br /> and welcome to my blog.
+			small This blog is an experiment and a learning experience.
+div.main-content.animated.bounceInUp.container
+	ul.col-xs-12.col-sm-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+		li.main-item(ng-repeat='article in articles | limitTo:3')
+			div.item-header
+				h2 {{ article.title }}
+				p
+					i.ion-person
+					span &nbsp;{{ article.author }} |&nbsp;
+					i.ion-calendar
+					time {{ article.createdOn | date }}
+				hr
+			div.item-content
+				p.article-desc {{ article.desc }}
+				p.continue-btn
+					button(btn-type='default', data-ng-click='getArticle(article._id)') Continue Reading

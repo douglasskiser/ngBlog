@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	div.wrap.container-fluid
+		header(data-ng-controller='NavigationCtrl')
+			nav.navbar.navbar-default(role='navigation')
+				div.navbar-header
+					a.navbar-brand(href='#!') dK
+					p.chevron.visible-xs(data-ng-click='toggleNav()')
+						i.ion-chevron-down
+				div.navbar-collapse(data-collapse='isCollapsed')
+					ul.nav.navbar-nav.navbar-right
+						li
+							a(href='#!') Home
+						li
+							a(href='#!/archive') Archive
+						li
+							a(href='#!/contact') Contact
+		div.view.animate-view(data-ng-view)

@@ -1,0 +1,25 @@
+div.container.animated.bounceInUp
+	div.col-xs-12.col-sm-12.col-md-8.col-md-offset-2.col-lg-8.col-lg-offset-2
+		h2 Edit Article
+		div.edit-form
+			form(name='editArticleForm', data-ng-submit='editArticle()')
+				div.form-group
+					input.form-control(data-ng-model='article.title', placeholder='Title')
+				div.form-group
+					input.form-control(data-ng-model='article.author', placeholder='Author')
+				div.form-group
+					div.radio
+						label
+							input(type='radio', data-ng-model='article.type', value='article')
+							span Article
+					div.radio
+						label
+							input(type='radio', data-ng-model='article.type', value='lab')
+							span Lab
+				div.form-group
+					textarea.form-control(data-ng-model='article.desc', rows='3', placeholder='Description')
+				div.form-group
+					textarea.form-control(data-ng-model='article.body', rows='5', placeholder='Body')
+				button.btn.btn-default.pull-right(type='submit') Update
+				br
+				span.form-message(data-ng-show='formMessage') {{formMessage}}

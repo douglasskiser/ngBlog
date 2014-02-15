@@ -1,0 +1,13 @@
+div.container.animated.bounceInUp
+	div.col-xs-12.col-sm-12.col-md-6.col-md-offset-3.col-lg-6.col-lg-offset-3
+		h2 Gimmie A Shout
+		p Have some suggestions, comments, or maybe you just want to yell at me but your not that loud.
+		form(name='contactForm', data-ng-submit='send()', role='form', novalidate)
+			div.form-group(data-ng-class='getCssClasses(contactForm.name)')
+				input.form-control(type='text', name='name', placeholder='Name', data-ng-model='contact.name', data-ng-min='2', required)
+			div.form-group(data-ng-class='getCssClasses(contactForm.email)')
+				input.form-control(type='email', name='email', placeholder='Email', data-ng-model='contact.email', data-ng-min='6', required)
+			div.form-group(data-ng-class='getCssClasses(contactForm.message)')
+				textarea.form-control(rows='5', name='message', placeholder='Message', data-ng-model='contact.message', data-ng-min='6', required)
+			button.pull-right(type='submit', data-ng-disabled='!canSend()') Send
+			p.fromMessage(data-ng-show='formMessage') {{ formMessage }}

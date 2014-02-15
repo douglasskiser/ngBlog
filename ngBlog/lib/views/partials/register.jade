@@ -1,0 +1,15 @@
+div.container.animated.bounceInUp
+	div.col-xs-12.col-sm-12.col-md-6.col-md-offset-3.col-lg-6.col-lg-offset-3
+		h2 Register
+		form(name='registerForm', data-ng-submit='register()', role='form', novalidate)
+			div.form-group(data-ng-class='getCssClasses(registerForm.username)')
+				div.input-group
+					span.input-group-addon
+						i.ion-person
+					input.form-control(type='text', name='username', placeholder='Username', data-ng-model='user.username', data-ng-min='3', required)
+				div.form-group(data-ng-class='getCssClasses(registerForm.password)')
+				div.input-group
+					span.input-group-addon
+						i.ion-key
+					input.form-control(type='password', name='password', placeholder='Password', data-ng-model='user.password', data-ng-min='3', required)
+			button.pull-right(type='submit', data-ng-disabled='!canRegister()') Register

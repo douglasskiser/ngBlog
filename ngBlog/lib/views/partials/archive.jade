@@ -1,0 +1,18 @@
+div.container.archive-view.animated.bounceInUp
+	div.col-xs-12.col-sm-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+		h2 Archive
+		div.archive-content
+			form(role='form')
+				div.form-group
+					div.input-group
+						span.input-group-addon
+							i.ion-archive
+						input.form-control(type='text', data-ng-model='search', placeholder='Archive')
+			div
+				table.table.table-hover
+					tr
+						th Post Date
+						th Article Title
+					tr.animate-search(data-ng-repeat='archive in archives | filter:search', data-ng-click='getArticle(archive._id)')
+						td {{archive.createdOn | date}}
+						td.archive-title {{archive.title | limitTo:75}}

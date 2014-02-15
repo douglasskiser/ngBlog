@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2013 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="glasses" unicode="&#xe811;" d="m0 386q-2 13 8 25l360 186q29 11 41-16q11-33-14-45l-227-104l658 0l-228 104q-25 16-14 45q14 27 43 16l362-186q11-12 9-25l-27-256q-8-30-33-30l-313 0q-25 2-31 26l-49 223q-39 25-92 1l-50-224q-6-26-32-26l-312 0q-27 2-31 30z m67-30l19-189l260 0l43 189l-322 0z m543 0l41-189l259 0l20 189l-320 0z" horiz-adv-x="999" />
+<glyph glyph-name="paper-plane" unicode="&#xe812;" d="m0 191q-2 18 14 28l937 625q8 6 18 6t18-6q15-10 13-31l-156-938q-4-13-16-21q-7-4-15-4q-6 0-12 2l-303 121l-64-107q-10-16-28-16t-27 16l-115 201l-244 97q-18 8-20 27z m98 11l189-77q2-2 5-3l3-2l527 564z m221-104l87-152l504 787z m183-62q12-2 20-4l265-108l125 748z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>
